@@ -1,0 +1,17 @@
+elpa
+elpy
+transient
+auto-save-list
+backups
+init.el~
+init.elc
+recentf
+smex-items
+bookmarks
+projectile-bookmarks.eld
+projectile.cache
+tmp
+.mc-lists.el
+ido.last
+eshell
+custom.elc
