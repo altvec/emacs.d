@@ -75,7 +75,7 @@
   :config
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
-  (load-theme 'doom-one t)
+  (load-theme 'doom-nord t)
 
   ;; org-mode fontification
   (doom-themes-org-config))
