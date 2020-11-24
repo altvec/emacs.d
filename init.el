@@ -448,7 +448,7 @@
 ;; Projectile
 (use-package projectile
   :config
-  (setq projectile-project-search-path '("~/code/")))
+  (setq projectile-project-search-path '("~/Code/")))
   (define-key projectile-mode-map (kbd "C-s-p") 'projectile-command-map) ;; Ctrl-cmd-p show projectile menu
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1)
@@ -467,7 +467,7 @@
 
 (use-package magit
   :config
-  (setq magit-repository-directories '(("\~/code" . 4)))
+  (setq magit-repository-directories '(("\~/Code" . 4)))
   (global-set-key (kbd "s-P") 'magit-status-with-prefix-arg)
   (global-set-key (kbd "s-g") 'magit-status))
 
