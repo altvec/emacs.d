@@ -81,7 +81,10 @@
   (doom-themes-org-config))
 
 (setq-default line-spacing 0)
-(set-face-attribute 'default nil :font "Fira Code 15")
+(set-face-attribute 'default nil :font "JetBrains Mono 14")
+;; Enable composition mode
+(mac-auto-operator-composition-mode)
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode 0)
