@@ -293,7 +293,7 @@
   :config
   (move-text-default-bindings))
 
-;; Curx
+;; Crux
 (use-package crux
   :bind (("C-a" . crux-move-beginning-of-line)
          ("s-<return>" . crux-smart-open-line)
