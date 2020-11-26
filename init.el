@@ -224,9 +224,18 @@
   (global-set-key (kbd "s-;") 'avy-goto-char-timer))
 
 ;; Auto completion
-(use-package auto-complete
+
+(use-package company
   :config
-  (ac-config-default))
+  (setq company-idle-delay 0.1)
+  (setq company-global-modes '(not org-mode))
+  (setq company-minimum-prefix-length 1)
+  (add-hook 'after-init-hook 'global-company-mode))
+
+;; Auto-complete does't work with elpy :(
+;; (use-package auto-complete
+;;   :config
+;;   (ac-config-default))
 
 (use-package smartparens
   :config
