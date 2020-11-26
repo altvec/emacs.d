@@ -33,8 +33,8 @@
 		    (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
   (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  (add-to-list 'package-archives (cons "org"   (concat proto "://orgmode.org/elpa/")) t)
-  (add-to-list 'package-archives (cons "gnu"   (concat proto "://elpa.gnu.org/packages/")) t))
+  (add-to-list 'package-archives (cons "org"   (concat proto "://orgmode.org/elpa/")) t))
+  ;; (add-to-list 'package-archives (cons "gnu"   (concat proto "://elpa.gnu.org/packages/")) t))
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
