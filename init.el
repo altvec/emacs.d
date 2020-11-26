@@ -23,7 +23,6 @@
   (string-equal system-type "darwin"))
 
 
-
 ;;;;;;;;;;;;;;;;;
 ;; Use package ;;
 ;;;;;;;;;;;;;;;;;
@@ -163,7 +162,6 @@
   :custom
   (doom-modeline-height 12)
   (doom-modeline-bar-width 4))
-
 
 ;; Rainbow delimiters
 (use-package rainbow-delimiters
