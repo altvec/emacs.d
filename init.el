@@ -535,8 +535,21 @@
      elpy-module-eldoc
      elpy-module-highlight-indentation
      elpy-module-django))
+  :init
+  (elpy-enable)
   :config
-  (elpy-enable))
+  ;; ensure that auto-complete is disabled for python
+  (with-eval-after-load 'auto-complete
+    (setq ac-modes (delq 'python-mode ac-modes))))
+
+;; Enable poetry
+(use-package poetry
+  :config
+  (poetry-tracking-mode) ;; this auto load related venv when opening a file
+  )
+
+;; Enable flycheck
+(use-package flycheck)
 
 (use-package format-all)
 
