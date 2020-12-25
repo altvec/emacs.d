@@ -50,10 +50,10 @@
 (when (is-macos)
   (setq
    mac-right-command-modifier 'super
-   mac-command-modifier 'super
-   mac-option-modifier 'meta
-   mac-left-option-modifier 'meta
-   mac-right-option-modifier 'nil))
+   mac-command-modifier       'super
+   mac-option-modifier        'meta
+   mac-left-option-modifier   'meta
+   mac-right-option-modifier  'nil))
 
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "s--") 'text-scale-decrease)
@@ -74,7 +74,7 @@
   :config
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
-  (load-theme 'doom-nord t)
+  (load-theme 'doom-one-light t)
 
   ;; org-mode fontification
   (doom-themes-org-config))
@@ -556,8 +556,13 @@
 (use-package js2-mode
   :mode "\\.jsx?\\'"
   :config
-  (add-to-list 'magic-mode-alist '("#!/usr/bin/env node" . js2-mode))
-  )
+  (add-to-list 'magic-mode-alist '("#!/usr/bin/env node" . js2-mode)))
+
+(use-package tide
+  :after (typescript-mode company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save)))
 
 
 ;;;;;;;;;;;;;;
